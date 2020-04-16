@@ -1,0 +1,40 @@
+{
+  "name": "node-typescript-api-boilerplate",
+  "version": "0.0.0",
+  "scripts": {
+    "production": "ts-node -r dotenv-safe/config --transpile-only src/server.ts",
+    "local": "nodemon --exec ts-node -r tsconfig-paths/register -r dotenv-safe/config src/server.ts",
+    "docs": "npx http-server docs/api -p 4123 -o / -c60",
+    "test": "jest --runInBand --forceExit --detectOpenHandles",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "hpp": "^0.2.3",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.3",
+    "@types/hapi__joi": "^16.0.12",
+    "@types/helmet": "0.0.45",
+    "@types/hpp": "^0.2.1",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.3",
+    "@types/supertest": "^2.0.8",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.0",
+    "tslint-config-airbnb": "^5.11.2"
+  }
+}

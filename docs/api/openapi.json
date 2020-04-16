@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Node Typescript API Boilerplate",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3500",
+      "description": "LOCAL"
+    }
+  ],
+  "externalDocs": {
+    "description": "Ver projeto no Github",
+    "url": "https://github.com/microenv/node-typescript-api-boilerplate"
+  },
+  "tags": [
+    {
+      "name": "Core",
+      "description": "Apenas healthcheck"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Core"
+        ],
+        "summary": "Healthcheck",
+        "operationId": "healthcheck",
+        "responses": {
+          "200": {
+            "description": "Status ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "OK"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
